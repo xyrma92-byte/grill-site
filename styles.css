@@ -44,8 +44,9 @@ section[id],.info[id]{scroll-margin-top:72px}
 .section{padding:26px 16px;max-width:1200px;margin:0 auto}
 .grid{display:grid;grid-template-columns:1fr;gap:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
-.card-img{position:relative;border:0;padding:0;background:#fff3e3;cursor:pointer;display:block;width:100%}
-.card-img img{width:100%;height:auto;aspect-ratio:320/360;object-fit:cover;max-height:300px}
+.card-img{position:relative;border:0;padding:0;background:#17120f;cursor:pointer;display:block;width:100%}
+.card-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;max-height:none}
+.card-img.ph{background:#fff3e3}
 .badge{position:absolute;top:10px;padding:4px 10px;border-radius:999px;font-size:.85rem;font-weight:800}
 .badge.hit{left:10px;background:#d00000;color:#fff}.badge.hit.static{position:static;display:inline-block;margin-bottom:6px}
 .badge.fuel{right:10px;background:#fff;color:var(--ink);border:1px solid var(--line)}
@@ -135,17 +136,19 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent)}
 .doc-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .doc table{border-collapse:collapse;width:100%}.doc td{border:1px solid var(--line);padding:8px;vertical-align:top}
 
+.card-body h3{font-size:.98rem}
 @media (max-width:639px){
-  #catalogGrid .card,#pickerResult .card{flex-direction:row}
-  #catalogGrid .card-img,#pickerResult .card-img{width:118px;flex:none}
-  #catalogGrid .card-img img,#pickerResult .card-img img{height:100%;max-height:none;object-fit:contain}
-  #catalogGrid .badge.fuel,#pickerResult .badge.fuel{display:none}
-  #catalogGrid .badge.hit,#pickerResult .badge.hit{top:6px;left:6px;font-size:.75rem}
-  #catalogGrid .card-body,#pickerResult .card-body{padding:10px 12px}
-  #catalogGrid .card-body h3,#pickerResult .card-body h3{font-size:.98rem}
-  #catalogGrid .price,#pickerResult .price{font-size:1.25rem;margin-top:2px}
-  #catalogGrid .btn,#pickerResult .card .btn{min-height:46px}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .card .badge.fuel,.card .model,.card .facts{display:none}
+  .card .badge.hit{top:6px;left:6px;font-size:.72rem}
+  .card-body{padding:10px}
+  .card-body h3{font-size:.82rem;line-height:1.25}
+  .price{font-size:1.1rem}
+  .card-actions{gap:6px}
+  .card .btn{min-height:44px;padding:8px 10px;font-size:.9rem}
+  .card .stock{font-size:.75rem}
 }
+@media (min-width:640px){.card .model,.card .facts{display:none}}
 @media (min-width:640px){
   .grid{grid-template-columns:repeat(2,1fr)}
   .hero-points{grid-template-columns:repeat(4,1fr)}
@@ -199,3 +202,7 @@ html.not-ru .lang-note{display:block}
 .section{background:linear-gradient(90deg,rgba(255,250,243,.93),rgba(255,250,243,.86) 55%,rgba(255,250,243,.8))}
 @media (max-width:700px){.bg-video::before{background:rgba(15,12,10,.35)}.bg-video::after{background:linear-gradient(180deg,rgba(20,16,13,.45),rgba(20,16,13,.6))}.section{background:rgba(255,250,243,.9)}}
 .cart-btn{white-space:nowrap;display:inline-flex;align-items:center;gap:4px}
+.card .badge.hit{top:auto;bottom:8px;left:8px}
+.card .badge.fuel{top:8px;right:8px}
+.grid>*{min-width:0}
+@media (max-width:430px){.lang-sel{max-width:92px;padding:0 6px;font-size:.8rem}.logo{font-size:1.1rem}.topbar{gap:6px;padding:8px 10px}.cart-btn{padding:8px 10px}}

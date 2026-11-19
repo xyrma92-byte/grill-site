@@ -36,6 +36,7 @@ function stockBadge(p){
   const a = available(p);
   return a > 0 ? `<span class="stock in">✅ В наличии: ${num(a)} шт</span>` : `<span class="stock order">🕓 Под заказ · ${esc(leadText())}</span>`;
 }
+function bigSrc(p){ const g = (CFG.productGallery || {})[p.model]; return (g && g[0]) || imgSrc(p); }
 function imgSrc(p){ return (CFG.productPhotos || {})[p.model] || p.placeholder; }
 const isPhoto = p => !!(CFG.productPhotos || {})[p.model];
 function sectionsText(p){
@@ -62,7 +63,7 @@ function bindContacts(root = document){
 // ---------- карточки ----------
 function cardHTML(p){
   return `<article class="card" data-id="${p.id}">
-    <button class="card-img" type="button" data-open="${p.id}" aria-label="Подробнее: ${esc(p.name)}">
+    <button class="card-img${isPhoto(p) ? '' : ' ph'}" type="button" data-open="${p.id}" aria-label="Подробнее: ${esc(p.name)}">
       <img src="${esc(imgSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" loading="lazy" width="320" height="360">
       ${p.hit ? '<span class="badge hit">Хит</span>' : ''}
       <span class="badge fuel ${p.fuel}">${p.fuel === 'gas' ? '🔥 Газ' : '⚡ Электро'}</span>
@@ -118,9 +119,9 @@ function openProduct(id){
   const specs = p.specs.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('') +
     `<tr><th>Гарантия</th><td>${p.warranty ? esc(p.warranty) : 'уточняйте у нас'}</td></tr>`;
   $('#productBody').innerHTML = `<div class="pm">
-    <div class="pm-img"><img src="${esc(imgSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" width="320" height="360">
+    <div class="pm-img"><img src="${esc(bigSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" width="320" height="360">
       ${isPhoto(p) ? '' : '<p class="muted small">Схематичный рисунок, не фото модели.</p>'}
-      ${((CFG.productGallery||{})[p.model]||[]).map(u=>`<img class="pm-extra" src="${esc(u)}" alt="${esc(p.name)}" loading="lazy">`).join('')}</div>
+      ${((CFG.productGallery||{})[p.model]||[]).slice(1).map(u=>`<img class="pm-extra" src="${esc(u)}" alt="${esc(p.name)}" loading="lazy">`).join('')}</div>
     <div class="pm-info">
       ${p.hit ? '<span class="badge hit static">Хит</span>' : ''}
       <h2 id="pmTitle">${esc(p.name)}</h2>
