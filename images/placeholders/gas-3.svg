@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" role="img" aria-label="Схематичный рисунок: ГАЗ · 3 гор.">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7ec"/><stop offset="1" stop-color="#ffe9cf"/></linearGradient>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa3ad"/><stop offset=".5" stop-color="#e6eaee"/><stop offset="1" stop-color="#8d96a0"/></linearGradient>
+<linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2f7bff"/><stop offset=".45" stop-color="#ff8a00"/><stop offset="1" stop-color="#ffd23f"/></linearGradient>
+<linearGradient id="hot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#ffb347"/></linearGradient>
+<linearGradient id="meat" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a4a22"/><stop offset=".5" stop-color="#c97a3d"/><stop offset="1" stop-color="#94512a"/></linearGradient>
+</defs>
+<rect width="320" height="360" rx="18" fill="url(#bg)"/>
+<rect x="70" y="50" width="180" height="22" rx="6" fill="#59616b"/>
+<rect x="70" y="70" width="60" height="220" rx="8" fill="url(#steel)" stroke="#6f7781"/>
+<rect x="82" y="83.0" width="34" height="58.7" rx="4" fill="#3a3f47"/><path d="M88 121.3 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><path d="M97 121.3 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><path d="M106 121.3 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><rect x="82" y="149.7" width="34" height="58.7" rx="4" fill="#3a3f47"/><path d="M88 188.0 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><path d="M97 188.0 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><path d="M106 188.0 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><rect x="82" y="216.3" width="34" height="58.7" rx="4" fill="#3a3f47"/><path d="M88 254.7 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><path d="M97 254.7 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/><path d="M106 254.7 q-4 -8 2 -16 q1 6 4 8 q2 -4 1 -8 q6 6 1 16 z" fill="url(#fl)"/>
+<line x1="173" y1="64" x2="173" y2="294" stroke="#4a4f57" stroke-width="4"/>
+<path d="M150 84 L196 84 Q205 130 200 220 Q192 260 173 264 Q154 260 146 220 Q141 130 150 84 z" fill="url(#meat)"/><path d="M148 110 Q173 118 199 110" stroke="#6b3517" stroke-width="2" fill="none" opacity=".55"/><path d="M149 138 Q173 146 198 138" stroke="#6b3517" stroke-width="2" fill="none" opacity=".55"/><path d="M148 166 Q173 174 199 166" stroke="#6b3517" stroke-width="2" fill="none" opacity=".55"/><path d="M149 194 Q173 202 198 194" stroke="#6b3517" stroke-width="2" fill="none" opacity=".55"/><path d="M148 222 Q173 230 199 222" stroke="#6b3517" stroke-width="2" fill="none" opacity=".55"/><path d="M149 250 Q173 258 198 250" stroke="#6b3517" stroke-width="2" fill="none" opacity=".55"/>
+<rect x="70" y="290" width="180" height="18" rx="5" fill="url(#steel)" stroke="#6f7781"/>
+<rect x="80" y="308" width="12" height="14" fill="#59616b"/><rect x="228" y="308" width="12" height="14" fill="#59616b"/>
+<text x="160.0" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#7a4a1d">ГАЗ · 3 гор. · схема</text>
+</svg>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Грили для шаурмы и донера — газ и электро | ГрильПро</title>
+<meta name="description" content="Профессиональные вертикальные грили для шаурмы и донера: газовые и электрические. Подбор, счёт, доставка по России.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1d1a17">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a href="#top" class="logo"><span class="logo-mark">🔥</span> <span data-brand>ГрильПро</span></a>
+  <nav class="nav">
+    <a href="#catalog">Каталог</a><a href="#picker">Подбор</a><a href="#delivery">Доставка</a><a href="#faq">Вопросы</a>
+  </nav>
+  <a class="hdr-phone" data-phone-link href="#">📞 <span data-phone></span></a>
+  <button class="cart-btn" id="cartBtn" type="button" aria-label="Корзина">🛒 <span class="cart-label">Заявка</span> <b id="cartCount">0</b></button>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Грили для шаурмы и донера</h1>
+      <p class="lead">Газовые и электрические. Для шаурмячной, кафе и точки у дороги.<br>Поможем выбрать, выставим счёт, отправим по России.</p>
+      <div class="cta-row">
+        <a class="btn big wa" data-wa="Здравствуйте! Хочу купить гриль для шаурмы." target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn big tg" data-tg target="_blank" rel="noopener">✈️ Telegram</a>
+        <a class="btn big call" data-phone-link>📞 Позвонить</a>
+      </div>
+      <div class="hero-links"><a class="btn ghost" href="#catalog">Смотреть каталог ↓</a><a class="btn ghost" href="#picker">Подобрать гриль</a></div>
+    </div>
+    <ul class="hero-points">
+      <li><b>🔥 Газ</b> 2–6 горелок</li>
+      <li><b>⚡ Электро</b> 8–10,8 кВт</li>
+      <li><b>🧾 Счёт</b> сразу после заявки</li>
+      <li><b>🚚 Доставка</b> по всей России</li>
+    </ul>
+  </section>
+
+  <section class="section" id="hits">
+    <h2>Хиты</h2>
+    <div class="grid" id="hitsGrid"></div>
+  </section>
+
+  <section class="section" id="catalog">
+    <h2>Каталог</h2>
+    <div class="filters" id="filters">
+      <div class="f-group" role="group" aria-label="Тип"><span class="f-label">Тип</span>
+        <button type="button" class="chip on" data-f="fuel" data-v="">Все</button>
+        <button type="button" class="chip" data-f="fuel" data-v="gas">🔥 Газ</button>
+        <button type="button" class="chip" data-f="fuel" data-v="electric">⚡ Электро</button>
+      </div>
+      <div class="f-group" role="group" aria-label="Горелки / секции"><span class="f-label">Горелки / секции</span>
+        <button type="button" class="chip on" data-f="sec" data-v="">Любые</button>
+        <button type="button" class="chip" data-f="sec" data-v="2">2</button>
+        <button type="button" class="chip" data-f="sec" data-v="3">3</button>
+        <button type="button" class="chip" data-f="sec" data-v="4">4</button>
+        <button type="button" class="chip" data-f="sec" data-v="5">5–6</button>
+      </div>
+      <div class="f-group" role="group" aria-label="Мощность"><span class="f-label">Мощность</span>
+        <button type="button" class="chip on" data-f="kw" data-v="">Любая</button>
+        <button type="button" class="chip" data-f="kw" data-v="0-10">до 10 кВт</button>
+        <button type="button" class="chip" data-f="kw" data-v="10-15">10–15 кВт</button>
+        <button type="button" class="chip" data-f="kw" data-v="15-20">15–20 кВт</button>
+        <button type="button" class="chip" data-f="kw" data-v="20-99">20+ кВт</button>
+      </div>
+      <div class="f-group"><span class="f-label">Сортировка</span>
+        <select id="sortSel" aria-label="Сортировка">
+          <option value="hit">Сначала хиты</option><option value="priceAsc">Цена ↑</option><option value="priceDesc">Цена ↓</option><option value="kw">Мощность ↓</option>
+        </select>
+      </div>
+    </div>
+    <p class="muted" id="foundInfo"></p>
+    <div class="grid" id="catalogGrid"></div>
+  </section>
+
+  <section class="section picker" id="picker">
+    <h2>Подобрать гриль</h2>
+    <p>Ответьте на 3 вопроса — покажем подходящие модели. Это ориентир, точно подскажем в мессенджере.</p>
+    <form id="pickerForm" class="card-form">
+      <fieldset><legend>1. Сколько шаурмы в день вы продаёте (или планируете)?</legend>
+        <div class="opts" id="pickPerDay"></div>
+      </fieldset>
+      <fieldset><legend>2. Есть газ (магистраль или баллон)?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="gas" value="yes" required> Да, есть газ</label>
+          <label class="opt"><input type="radio" name="gas" value="no"> Нет газа</label>
+          <label class="opt"><input type="radio" name="gas" value="unknown"> Не знаю</label>
+        </div>
+      </fieldset>
+      <fieldset><legend>3. Есть электросеть 380 В (три фазы)?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="v380" value="yes" required> Да, 380 В</label>
+          <label class="opt"><input type="radio" name="v380" value="no"> Нет, только 220 В</label>
+          <label class="opt"><input type="radio" name="v380" value="unknown"> Не знаю</label>
+        </div>
+      </fieldset>
+      <button class="btn big primary" type="submit">Показать модели</button>
+    </form>
+    <div id="pickerResult" class="picker-result" hidden></div>
+  </section>
+
+  <section class="section steps">
+    <h2>Как купить</h2>
+    <ol class="steps-list">
+      <li><b>Выберите гриль</b> в каталоге или напишите нам — подберём.</li>
+      <li><b>Оставьте заявку</b> — счёт на оплату откроется сразу.</li>
+      <li><b>Оплатите по счёту</b> и пришлите чек в WhatsApp или Telegram.</li>
+      <li><b>Получите гриль</b> — отправим транспортной компанией или заберёте сами.</li>
+    </ol>
+  </section>
+
+  <section class="section info-cards">
+    <div class="info" id="delivery">
+      <h2>🚚 Доставка по России</h2>
+      <p>Отправляем транспортными компаниями в любой город — до терминала или до двери. Можно забрать самому со склада.</p>
+      <p><b>Стоимость рассчитаем</b> под ваш город и сообщим до отправки. Доставка в счёт не входит.</p>
+      <a class="btn wa" data-wa="Здравствуйте! Посчитайте доставку гриля в город: " target="_blank" rel="noopener">💬 Посчитать доставку</a>
+    </div>
+    <div class="info" id="warranty">
+      <h2>🛡 Гарантия</h2>
+      <p>Срок гарантии указан в карточке каждой модели. На модели с отметкой «Гарантия 1 год» действует гарантия 1 год.</p>
+      <p>Если в карточке срок не указан — уточните у нас перед покупкой.</p>
+    </div>
+    <div class="info" id="payment">
+      <h2>🧾 Оплата</h2>
+      <p id="paymentInfo">Безналичная оплата по счёту.</p>
+      <p>Если товар есть на складе — после счёта он <b>забронирован за вами до конца следующего дня</b>.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>Частые вопросы</h2>
+    <div class="faq" id="faqList"></div>
+  </section>
+
+  <section class="section contacts" id="contacts">
+    <h2>Связаться</h2>
+    <p>Пишите или звоните — ответим простыми словами, поможем с выбором.</p>
+    <div class="cta-row">
+      <a class="btn big wa" data-wa="Здравствуйте! Вопрос по грилю для шаурмы." target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn big tg" data-tg target="_blank" rel="noopener">✈️ Telegram</a>
+      <a class="btn big call" data-phone-link>📞 <span data-phone></span></a>
+      <a class="btn big ghost" data-mail>✉️ Почта</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div><b data-brand>ГрильПро</b> · <span data-seller></span></div>
+  <div class="foot-links"><a href="privacy.html">Политика ПД</a><a href="consent.html">Согласие на обработку ПД</a><a href="terms.html">Условия</a></div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Связь">
+  <a class="mb wa" data-wa="Здравствуйте! Хочу купить гриль для шаурмы." target="_blank" rel="noopener">💬<span>WhatsApp</span></a>
+  <a class="mb tg" data-tg target="_blank" rel="noopener">✈️<span>Telegram</span></a>
+  <a class="mb call" data-phone-link>📞<span>Звонок</span></a>
+  <button class="mb cart" type="button" id="cartBtnMobile">🛒<span>Заявка <b id="cartCountMobile">0</b></span></button>
+</nav>
+
+<!-- Карточка товара -->
+<div class="modal" id="productModal" hidden><div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <button class="modal-x" type="button" data-close aria-label="Закрыть">×</button>
+  <div id="productBody"></div>
+</div></div>
+
+<!-- Корзина -->
+<div class="modal" id="cartModal" hidden><div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <button class="modal-x" type="button" data-close aria-label="Закрыть">×</button>
+  <h2 id="cartTitle">Ваша заявка</h2>
+  <div id="cartBody"></div>
+</div></div>
+
+<!-- Оформление -->
+<div class="modal" id="checkoutModal" hidden><div class="modal-box wide" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+  <button class="modal-x" type="button" data-close aria-label="Закрыть">×</button>
+  <h2 id="coTitle">Оформление заявки</h2>
+  <div id="coSummary"></div>
+  <form id="orderForm" novalidate>
+    <h3>Ваши данные</h3>
+    <div class="form-grid">
+      <label>Имя *<input name="name" required autocomplete="name"></label>
+      <label>Телефон (WhatsApp / Telegram) *<input name="phone" type="tel" required autocomplete="tel" placeholder="+7 ..."></label>
+      <label>Почта (для счёта)<input name="email" type="email" autocomplete="email"></label>
+      <label>Название точки / компании<input name="company" autocomplete="organization"></label>
+    </div>
+    <div id="payBlock">
+      <h3>Способ оплаты</h3>
+      <div class="opts" id="payOptions"></div>
+      <div class="form-grid" id="buyerReq">
+        <label>ИНН покупателя<input name="inn" inputmode="numeric" maxlength="12"></label>
+        <label>Реквизиты покупателя (адрес, КПП и т.п.)<input name="requisites"></label>
+      </div>
+    </div>
+    <h3>Доставка</h3>
+    <div class="opts" id="dlvOptions"></div>
+    <div class="form-grid">
+      <label id="dlvCityL">Город *<input name="dlvCity" autocomplete="address-level2"></label>
+      <label id="dlvAddrL">Адрес доставки<input name="dlvAddress" autocomplete="street-address"></label>
+    </div>
+    <label>Комментарий<textarea name="comment" rows="2" placeholder="Например: нужен гриль до конца месяца, есть баллонный газ"></textarea></label>
+    <div class="consents">
+      <label class="chk"><input type="checkbox" data-consent="pd" required> Даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a> и ознакомлен(а) с <a href="privacy.html" target="_blank">Политикой</a> *</label>
+      <label class="chk"><input type="checkbox" data-consent="terms" required> Согласен(на) с <a href="terms.html" target="_blank">условиями оплаты и доставки</a> *</label>
+    </div>
+    <div class="err" id="orderErr" role="alert"></div>
+    <div class="co-total" id="coTotal"></div>
+    <button class="btn big primary" id="orderSubmit" type="submit">Отправить заявку</button>
+    <p class="muted small" id="submitHint"></p>
+  </form>
+</div></div>
+
+<!-- Результат -->
+<div class="modal" id="doneModal" hidden><div class="modal-box" role="dialog" aria-modal="true">
+  <button class="modal-x" type="button" data-close aria-label="Закрыть">×</button>
+  <div id="doneBody"></div>
+</div></div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="products.js"></script>
+<script src="reservations.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
