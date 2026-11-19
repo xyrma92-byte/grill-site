@@ -42,9 +42,9 @@ window.PRODUCTS = [
   "photoFile": "images/products/zh91.jpg"
  },
  {
-  "id": "gb-800",
-  "model": "GB-800",
-  "name": "Газовый гриль для шаурмы, 3 горелки, 11,5 кВт (GB-800)",
+  "id": "bgb-800",
+  "model": "BGB-800",
+  "name": "Газовый гриль для шаурмы, 3 горелки, 11,5 кВт (BGB-800)",
   "shortName": "Газовый гриль для шаурмы, 3 горелки, 11,5 кВт",
   "fuel": "gas",
   "sections": 3,
@@ -61,6 +61,10 @@ window.PRODUCTS = [
    [
     "Тип",
     "газовый"
+   ],
+   [
+    "Топливо",
+    "сжиженный газ (LPG, пропан)"
    ],
    [
     "Горелки",
@@ -80,12 +84,12 @@ window.PRODUCTS = [
    ]
   ],
   "placeholder": "images/placeholders/gas-3.svg",
-  "photoFile": "images/products/gb-800.jpg"
+  "photoFile": "images/products/bgb-800.jpg"
  },
  {
-  "id": "gb-25a",
-  "model": "GB-25A",
-  "name": "Компактный газовый гриль для шаурмы, 2 горелки, 7,7 кВт (GB-25A)",
+  "id": "bgb-25a",
+  "model": "BGB-25A",
+  "name": "Компактный газовый гриль для шаурмы, 2 горелки, 7,7 кВт (BGB-25A)",
   "shortName": "Компактный газовый гриль для шаурмы, 2 горелки, 7,7 кВт",
   "fuel": "gas",
   "sections": 2,
@@ -102,6 +106,10 @@ window.PRODUCTS = [
    [
     "Тип",
     "газовый"
+   ],
+   [
+    "Топливо",
+    "сжиженный газ (LPG, пропан)"
    ],
    [
     "Горелки",
@@ -121,7 +129,7 @@ window.PRODUCTS = [
    ]
   ],
   "placeholder": "images/placeholders/gas-2.svg",
-  "photoFile": "images/products/gb-25a.jpg"
+  "photoFile": "images/products/bgb-25a.jpg"
  },
  {
   "id": "gb-800a",
@@ -165,9 +173,9 @@ window.PRODUCTS = [
   "photoFile": "images/products/gb-800a.jpg"
  },
  {
-  "id": "gb-950",
-  "model": "GB-950",
-  "name": "Газовый гриль для шаурмы, 4 горелки, 15,4 кВт (GB-950)",
+  "id": "bgb-950",
+  "model": "BGB-950",
+  "name": "Газовый гриль для шаурмы, 4 горелки, 15,4 кВт (BGB-950)",
   "shortName": "Газовый гриль для шаурмы, 4 горелки, 15,4 кВт",
   "fuel": "gas",
   "sections": 4,
@@ -184,6 +192,10 @@ window.PRODUCTS = [
    [
     "Тип",
     "газовый"
+   ],
+   [
+    "Топливо",
+    "сжиженный газ (LPG, пропан)"
    ],
    [
     "Горелки",
@@ -203,7 +215,7 @@ window.PRODUCTS = [
    ]
   ],
   "placeholder": "images/placeholders/gas-4.svg",
-  "photoFile": "images/products/gb-950.jpg"
+  "photoFile": "images/products/bgb-950.jpg"
  },
  {
   "id": "zh92m",
@@ -292,9 +304,9 @@ window.PRODUCTS = [
   "photoFile": "images/products/zh90.jpg"
  },
  {
-  "id": "gb-1050",
-  "model": "GB-1050",
-  "name": "Газовый гриль для шаурмы, 5 горелок, 19,8 кВт (GB-1050)",
+  "id": "bgb-1050",
+  "model": "BGB-1050",
+  "name": "Газовый гриль для шаурмы, 5 горелок, 19,8 кВт (BGB-1050)",
   "shortName": "Газовый гриль для шаурмы, 5 горелок, 19,8 кВт",
   "fuel": "gas",
   "sections": 5,
@@ -311,6 +323,10 @@ window.PRODUCTS = [
    [
     "Тип",
     "газовый"
+   ],
+   [
+    "Топливо",
+    "сжиженный газ (LPG, пропан)"
    ],
    [
     "Горелки",
@@ -330,7 +346,7 @@ window.PRODUCTS = [
    ]
   ],
   "placeholder": "images/placeholders/gas-5.svg",
-  "photoFile": "images/products/gb-1050.jpg"
+  "photoFile": "images/products/bgb-1050.jpg"
  },
  {
   "id": "zh92",
@@ -419,9 +435,9 @@ window.PRODUCTS = [
   "photoFile": "images/products/zh91a.jpg"
  },
  {
-  "id": "gb-1150",
-  "model": "GB-1150",
-  "name": "Газовый гриль для шаурмы, 6 горелок, 24 кВт (GB-1150)",
+  "id": "bgb-1150",
+  "model": "BGB-1150",
+  "name": "Газовый гриль для шаурмы, 6 горелок, 24 кВт (BGB-1150)",
   "shortName": "Газовый гриль для шаурмы, 6 горелок, 24 кВт",
   "fuel": "gas",
   "sections": 6,
@@ -438,6 +454,10 @@ window.PRODUCTS = [
    [
     "Тип",
     "газовый"
+   ],
+   [
+    "Топливо",
+    "сжиженный газ (LPG, пропан)"
    ],
    [
     "Горелки",
@@ -457,7 +477,7 @@ window.PRODUCTS = [
    ]
   ],
   "placeholder": "images/placeholders/gas-6.svg",
-  "photoFile": "images/products/gb-1150.jpg"
+  "photoFile": "images/products/bgb-1150.jpg"
  },
  {
   "id": "zh95",
@@ -807,6 +827,10 @@ window.PRODUCTS = [
    [
     "Тип",
     "электрический"
+   ],
+   [
+    "Питание",
+    "380 В, 3N"
    ],
    [
     "Мощность",
