@@ -26,7 +26,20 @@ window.SITE_CONFIG = {
   productPhotos: {
     "BGB-25A": "images/products/bgb-25a-card.jpg", "BGB-800": "images/products/bgb-800-card.jpg",
     "BGB-950": "images/products/bgb-950-live-card.jpg", "BGB-1050": "images/products/bgb-1050-card.jpg",
-    "BGB-1150": "images/products/bgb-1150-card.jpg", "BEB-808": "images/products/beb-808-card.jpg"
+    "BGB-1150": "images/products/bgb-1150-card.jpg", "BEB-808": "images/products/beb-808-card.jpg",
+    "ZH890": "images/products/zh890-card.jpg",
+    "ZH891": "images/products/zh891-card.jpg",
+    "ZH884": "images/products/zh884-card.jpg",
+    "ZH894": "images/products/zh894-card.jpg",
+    "ZH885": "images/products/zh885-card.jpg",
+    "ZH895": "images/products/zh895-card.jpg",
+    "ZH90": "images/products/zh90-card.jpg",
+    "ZH91": "images/products/zh91-card.jpg",
+    "ZH91A": "images/products/zh91a-card.jpg",
+    "ZH92": "images/products/zh92-card.jpg",
+    "ZH92M": "images/products/zh92m-card.jpg",
+    "ZH95": "images/products/zh95-card.jpg",
+    "ZH96": "images/products/zh96-card.jpg"
   },
   // Доп. фото в карточке товара (галерея): первая — основная выше
   productGallery: {

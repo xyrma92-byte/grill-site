@@ -11,8 +11,8 @@ window.PRODUCTS = [
   "powerKw": 13.5,
   "weightKg": 25,
   "grossKg": 35,
-  "dims": "730×570×950",
-  "dimsKind": "package",
+  "dims": "500×650×900",
+  "dimsKind": "product",
   "price": 39900,
   "warranty": null,
   "hit": true,
@@ -30,16 +30,25 @@ window.PRODUCTS = [
     "13,5 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×900 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×950 мм"
    ],
    [
     "Вес нетто / брутто",
     "25 / 35 кг"
+   ],
+   [
+    "Электропитание",
+    "220–240 В, 50 Гц (привод вертела 50 Вт)"
    ]
   ],
   "placeholder": "images/placeholders/gas-3.svg",
-  "photoFile": "images/products/zh91.jpg"
+  "photoFile": "images/products/zh91.jpg",
+  "packageDims": "730×570×950"
  },
  {
   "id": "bgb-800",
@@ -228,8 +237,8 @@ window.PRODUCTS = [
   "powerKw": 18,
   "weightKg": 20.25,
   "grossKg": 39,
-  "dims": "673×670×997",
-  "dimsKind": "package",
+  "dims": "550×650×990",
+  "dimsKind": "product",
   "price": 58900,
   "warranty": null,
   "hit": false,
@@ -247,6 +256,10 @@ window.PRODUCTS = [
     "18 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "550×650×990 мм"
+   ],
+   [
     "Размер упаковки",
     "673×670×997 мм"
    ],
@@ -255,12 +268,13 @@ window.PRODUCTS = [
     "20,25 / 39 кг"
    ],
    [
-    "Особенность",
-    "Ручной поворот вертела"
+    "Электропитание",
+    "ручной вертел, без привода"
    ]
   ],
   "placeholder": "images/placeholders/gas-4.svg",
-  "photoFile": "images/products/zh92m.jpg"
+  "photoFile": "images/products/zh92m.jpg",
+  "packageDims": "673×670×997"
  },
  {
   "id": "zh90",
@@ -273,8 +287,8 @@ window.PRODUCTS = [
   "powerKw": 9,
   "weightKg": 20,
   "grossKg": 30,
-  "dims": "730×570×950",
-  "dimsKind": "package",
+  "dims": "500×650×900",
+  "dimsKind": "product",
   "price": 61900,
   "warranty": null,
   "hit": false,
@@ -292,16 +306,25 @@ window.PRODUCTS = [
     "9 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×900 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×950 мм"
    ],
    [
     "Вес нетто / брутто",
     "20 / 30 кг"
+   ],
+   [
+    "Электропитание",
+    "220–240 В, 50 Гц (привод вертела 50 Вт)"
    ]
   ],
   "placeholder": "images/placeholders/gas-2.svg",
-  "photoFile": "images/products/zh90.jpg"
+  "photoFile": "images/products/zh90.jpg",
+  "packageDims": "730×570×950"
  },
  {
   "id": "bgb-1050",
@@ -359,8 +382,8 @@ window.PRODUCTS = [
   "powerKw": 18,
   "weightKg": 28.5,
   "grossKg": 45.5,
-  "dims": "730×570×1140",
-  "dimsKind": "package",
+  "dims": "500×650×1080",
+  "dimsKind": "product",
   "price": 71900,
   "warranty": null,
   "hit": false,
@@ -378,16 +401,25 @@ window.PRODUCTS = [
     "18 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×1080 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×1140 мм"
    ],
    [
     "Вес нетто / брутто",
     "28,5 / 45,5 кг"
+   ],
+   [
+    "Электропитание",
+    "220–240 В, 50 Гц (привод вертела 50 Вт)"
    ]
   ],
   "placeholder": "images/placeholders/gas-4.svg",
-  "photoFile": "images/products/zh92.jpg"
+  "photoFile": "images/products/zh92.jpg",
+  "packageDims": "730×570×1140"
  },
  {
   "id": "zh91a",
@@ -400,8 +432,8 @@ window.PRODUCTS = [
   "powerKw": 18,
   "weightKg": 30.5,
   "grossKg": 40,
-  "dims": "730×570×1140",
-  "dimsKind": "package",
+  "dims": "500×650×1080",
+  "dimsKind": "product",
   "price": 76900,
   "warranty": null,
   "hit": false,
@@ -419,6 +451,10 @@ window.PRODUCTS = [
     "18 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×1080 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×1140 мм"
    ],
@@ -427,12 +463,13 @@ window.PRODUCTS = [
     "30,5 / 40 кг"
    ],
    [
-    "Особенность",
-    "Исполнение с дверцей"
+    "Электропитание",
+    "220–240 В, 50 Гц (привод вертела 50 Вт)"
    ]
   ],
   "placeholder": "images/placeholders/gas-4.svg",
-  "photoFile": "images/products/zh91a.jpg"
+  "photoFile": "images/products/zh91a.jpg",
+  "packageDims": "730×570×1140"
  },
  {
   "id": "bgb-1150",
@@ -490,8 +527,8 @@ window.PRODUCTS = [
   "powerKw": 22.5,
   "weightKg": 35,
   "grossKg": 45,
-  "dims": "730×570×1400",
-  "dimsKind": "package",
+  "dims": "500×650×1340",
+  "dimsKind": "product",
   "price": 85900,
   "warranty": null,
   "hit": false,
@@ -509,16 +546,25 @@ window.PRODUCTS = [
     "22,5 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×1340 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×1400 мм"
    ],
    [
     "Вес нетто / брутто",
     "35 / 45 кг"
+   ],
+   [
+    "Электропитание",
+    "220–240 В, 50 Гц (привод вертела 50 Вт)"
    ]
   ],
   "placeholder": "images/placeholders/gas-5.svg",
-  "photoFile": "images/products/zh95.jpg"
+  "photoFile": "images/products/zh95.jpg",
+  "packageDims": "730×570×1400"
  },
  {
   "id": "zh96",
@@ -531,8 +577,8 @@ window.PRODUCTS = [
   "powerKw": 27,
   "weightKg": 37,
   "grossKg": 48,
-  "dims": "730×570×1500",
-  "dimsKind": "package",
+  "dims": "500×650×1430",
+  "dimsKind": "product",
   "price": 93900,
   "warranty": null,
   "hit": false,
@@ -550,16 +596,25 @@ window.PRODUCTS = [
     "27 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×1430 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×1500 мм"
    ],
    [
     "Вес нетто / брутто",
     "37 / 48 кг"
+   ],
+   [
+    "Электропитание",
+    "220–240 В, 50 Гц (привод вертела 50 Вт)"
    ]
   ],
   "placeholder": "images/placeholders/gas-6.svg",
-  "photoFile": "images/products/zh96.jpg"
+  "photoFile": "images/products/zh96.jpg",
+  "packageDims": "730×570×1500"
  },
  {
   "id": "zh890",
@@ -572,8 +627,8 @@ window.PRODUCTS = [
   "powerKw": 8.1,
   "weightKg": 25.5,
   "grossKg": 27,
-  "dims": "730×570×950",
-  "dimsKind": "package",
+  "dims": "500×650×900",
+  "dimsKind": "product",
   "price": 67900,
   "warranty": null,
   "hit": false,
@@ -591,16 +646,25 @@ window.PRODUCTS = [
     "8,1 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×900 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×950 мм"
    ],
    [
     "Вес нетто / брутто",
     "25,5 / 27 кг"
+   ],
+   [
+    "Электропитание",
+    "220–240 В, 50 Гц"
    ]
   ],
   "placeholder": "images/placeholders/electric-0.svg",
-  "photoFile": "images/products/zh890.jpg"
+  "photoFile": "images/products/zh890.jpg",
+  "packageDims": "730×570×950"
  },
  {
   "id": "zh891",
@@ -613,8 +677,8 @@ window.PRODUCTS = [
   "powerKw": 10.8,
   "weightKg": 31.5,
   "grossKg": 35,
-  "dims": "730×570×1150",
-  "dimsKind": "package",
+  "dims": "500×650×1050",
+  "dimsKind": "product",
   "price": 78900,
   "warranty": null,
   "hit": false,
@@ -632,16 +696,25 @@ window.PRODUCTS = [
     "10,8 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "500×650×1050 мм"
+   ],
+   [
     "Размер упаковки",
     "730×570×1150 мм"
    ],
    [
     "Вес нетто / брутто",
     "31,5 / 35 кг"
+   ],
+   [
+    "Электропитание",
+    "380 В, 50 Гц"
    ]
   ],
   "placeholder": "images/placeholders/electric-0.svg",
-  "photoFile": "images/products/zh891.jpg"
+  "photoFile": "images/products/zh891.jpg",
+  "packageDims": "730×570×1150"
  },
  {
   "id": "zh884",
@@ -654,8 +727,8 @@ window.PRODUCTS = [
   "powerKw": 8,
   "weightKg": 32.4,
   "grossKg": 43,
-  "dims": "670×780×1150",
-  "dimsKind": "package",
+  "dims": "600×700×1085",
+  "dimsKind": "product",
   "price": 96900,
   "warranty": null,
   "hit": false,
@@ -673,16 +746,25 @@ window.PRODUCTS = [
     "8 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "600×700×1085 мм"
+   ],
+   [
     "Размер упаковки",
     "670×780×1150 мм"
    ],
    [
     "Вес нетто / брутто",
     "32,4 / 43 кг"
+   ],
+   [
+    "Электропитание",
+    "380 В, 50 Гц"
    ]
   ],
   "placeholder": "images/placeholders/electric-4.svg",
-  "photoFile": "images/products/zh884.jpg"
+  "photoFile": "images/products/zh884.jpg",
+  "packageDims": "670×780×1150"
  },
  {
   "id": "zh894",
@@ -695,8 +777,8 @@ window.PRODUCTS = [
   "powerKw": 8,
   "weightKg": 31.1,
   "grossKg": 42,
-  "dims": "670×780×1305",
-  "dimsKind": "package",
+  "dims": "570×635×1245",
+  "dimsKind": "product",
   "price": 98900,
   "warranty": null,
   "hit": false,
@@ -714,16 +796,25 @@ window.PRODUCTS = [
     "8 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "570×635×1245 мм"
+   ],
+   [
     "Размер упаковки",
     "670×780×1305 мм"
    ],
    [
     "Вес нетто / брутто",
     "31,1 / 42 кг"
+   ],
+   [
+    "Электропитание",
+    "380 В, 50 Гц"
    ]
   ],
   "placeholder": "images/placeholders/electric-4.svg",
-  "photoFile": "images/products/zh894.jpg"
+  "photoFile": "images/products/zh894.jpg",
+  "packageDims": "670×780×1305"
  },
  {
   "id": "zh885",
@@ -736,8 +827,8 @@ window.PRODUCTS = [
   "powerKw": 10,
   "weightKg": 35,
   "grossKg": 45,
-  "dims": "670×780×1410",
-  "dimsKind": "package",
+  "dims": "600×700×1350",
+  "dimsKind": "product",
   "price": 104900,
   "warranty": null,
   "hit": false,
@@ -755,16 +846,25 @@ window.PRODUCTS = [
     "10 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "600×700×1350 мм"
+   ],
+   [
     "Размер упаковки",
     "670×780×1410 мм"
    ],
    [
     "Вес нетто / брутто",
     "35 / 45 кг"
+   ],
+   [
+    "Электропитание",
+    "380 В, 50 Гц"
    ]
   ],
   "placeholder": "images/placeholders/electric-5.svg",
-  "photoFile": "images/products/zh885.jpg"
+  "photoFile": "images/products/zh885.jpg",
+  "packageDims": "670×780×1410"
  },
  {
   "id": "zh895",
@@ -777,8 +877,8 @@ window.PRODUCTS = [
   "powerKw": 10,
   "weightKg": 34,
   "grossKg": 44,
-  "dims": "670×780×1570",
-  "dimsKind": "package",
+  "dims": "570×635×1510",
+  "dimsKind": "product",
   "price": 109900,
   "warranty": null,
   "hit": false,
@@ -796,16 +896,25 @@ window.PRODUCTS = [
     "10 кВт"
    ],
    [
+    "Габариты аппарата (Ш×Г×В)",
+    "570×635×1510 мм"
+   ],
+   [
     "Размер упаковки",
     "670×780×1570 мм"
    ],
    [
     "Вес нетто / брутто",
     "34 / 44 кг"
+   ],
+   [
+    "Электропитание",
+    "380 В, 50 Гц"
    ]
   ],
   "placeholder": "images/placeholders/electric-5.svg",
-  "photoFile": "images/products/zh895.jpg"
+  "photoFile": "images/products/zh895.jpg",
+  "packageDims": "670×780×1570"
  },
  {
   "id": "beb-808",
