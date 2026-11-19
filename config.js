@@ -24,87 +24,47 @@ window.SITE_CONFIG = {
   madeToOrderLead: "",                  // Срок поставки «под заказ», напр. "от 3 недель". Пусто → «срок сообщим при заказе»
   // Фото товаров: { "ZH91": "images/products/zh91.jpg" }. Пока пусто → схематичные рисунки из images/placeholders/
   productPhotos: {
-    "ZH91": "images/products/zh91-grid.jpg",
-    "BGB-800": "images/products/bgb-800-grid.jpg",
-    "BGB-25A": "images/products/bgb-25a-grid.jpg",
-    "BGB-950": "images/products/bgb-950-grid.jpg",
-    "ZH92M": "images/products/zh92m-grid.jpg",
-    "ZH90": "images/products/zh90-grid.jpg",
-    "BGB-1050": "images/products/bgb-1050-grid.jpg",
-    "ZH92": "images/products/zh92-grid.jpg",
-    "ZH91A": "images/products/zh91a-grid.jpg",
-    "BGB-1150": "images/products/bgb-1150-grid.jpg",
-    "ZH95": "images/products/zh95-grid.jpg",
-    "ZH96": "images/products/zh96-grid.jpg",
-    "ZH890": "images/products/zh890-grid.jpg",
-    "ZH891": "images/products/zh891-grid.jpg",
-    "ZH884": "images/products/zh884-grid.jpg",
-    "ZH894": "images/products/zh894-grid.jpg",
-    "ZH885": "images/products/zh885-grid.jpg",
-    "ZH895": "images/products/zh895-grid.jpg",
-    "BEB-808": "images/products/beb-808-grid.jpg"
+    "ZH91": "images/products/kitchen/zh91-t.jpg",
+    "BGB-800": "images/products/kitchen/bgb-800-t.jpg",
+    "BGB-25A": "images/products/kitchen/bgb-25a-t.jpg",
+    "BGB-950": "images/products/kitchen/bgb-950-t.jpg",
+    "ZH92M": "images/products/kitchen/zh92m-t.jpg",
+    "ZH90": "images/products/kitchen/zh90-t.jpg",
+    "BGB-1050": "images/products/kitchen/bgb-1050-t.jpg",
+    "ZH92": "images/products/kitchen/zh92-t.jpg",
+    "ZH91A": "images/products/kitchen/zh91a-t.jpg",
+    "BGB-1150": "images/products/kitchen/bgb-1150-t.jpg",
+    "ZH95": "images/products/kitchen/zh95-t.jpg",
+    "ZH96": "images/products/kitchen/zh96-t.jpg",
+    "ZH890": "images/products/kitchen/zh890-t.jpg",
+    "ZH891": "images/products/kitchen/zh891-t.jpg",
+    "ZH884": "images/products/kitchen/zh884-t.jpg",
+    "ZH894": "images/products/kitchen/zh894-t.jpg",
+    "ZH885": "images/products/kitchen/zh885-t.jpg",
+    "ZH895": "images/products/kitchen/zh895-t.jpg",
+    "BEB-808": "images/products/kitchen/beb-808-t.jpg"
   },
-  // Галерея в карточке товара: постер-карточки
+  // Галерея в карточке товара: кухонные фото (ИИ-ретушь фото поставщика)
   productGallery: {
-    "ZH91": [
-        "images/products/zh91-card.jpg"
-    ],
-    "BGB-800": [
-        "images/products/bgb-800-card.jpg"
-    ],
-    "BGB-25A": [
-        "images/products/bgb-25a-card.jpg"
-    ],
-    "BGB-950": [
-        "images/products/bgb-950-live-card.jpg",
-        "images/products/bgb-950-card.jpg",
-        "images/products/bgb-950-in-action.jpg"
-    ],
-    "ZH92M": [
-        "images/products/zh92m-card.jpg"
-    ],
-    "ZH90": [
-        "images/products/zh90-card.jpg"
-    ],
-    "BGB-1050": [
-        "images/products/bgb-1050-card.jpg"
-    ],
-    "ZH92": [
-        "images/products/zh92-card.jpg"
-    ],
-    "ZH91A": [
-        "images/products/zh91a-card.jpg"
-    ],
-    "BGB-1150": [
-        "images/products/bgb-1150-card.jpg"
-    ],
-    "ZH95": [
-        "images/products/zh95-card.jpg"
-    ],
-    "ZH96": [
-        "images/products/zh96-card.jpg"
-    ],
-    "ZH890": [
-        "images/products/zh890-card.jpg"
-    ],
-    "ZH891": [
-        "images/products/zh891-card.jpg"
-    ],
-    "ZH884": [
-        "images/products/zh884-card.jpg"
-    ],
-    "ZH894": [
-        "images/products/zh894-card.jpg"
-    ],
-    "ZH885": [
-        "images/products/zh885-card.jpg"
-    ],
-    "ZH895": [
-        "images/products/zh895-card.jpg"
-    ],
-    "BEB-808": [
-        "images/products/beb-808-card.jpg"
-    ]
+    "ZH91": ["images/products/kitchen/zh91.jpg"],
+    "BGB-800": ["images/products/kitchen/bgb-800.jpg"],
+    "BGB-25A": ["images/products/kitchen/bgb-25a.jpg"],
+    "BGB-950": ["images/products/kitchen/bgb-950.jpg","images/products/bgb-950-in-action.jpg"],
+    "ZH92M": ["images/products/kitchen/zh92m.jpg"],
+    "ZH90": ["images/products/kitchen/zh90.jpg"],
+    "BGB-1050": ["images/products/kitchen/bgb-1050.jpg"],
+    "ZH92": ["images/products/kitchen/zh92.jpg"],
+    "ZH91A": ["images/products/kitchen/zh91a.jpg"],
+    "BGB-1150": ["images/products/kitchen/bgb-1150.jpg"],
+    "ZH95": ["images/products/kitchen/zh95.jpg"],
+    "ZH96": ["images/products/kitchen/zh96.jpg"],
+    "ZH890": ["images/products/kitchen/zh890.jpg"],
+    "ZH891": ["images/products/kitchen/zh891.jpg"],
+    "ZH884": ["images/products/kitchen/zh884.jpg"],
+    "ZH894": ["images/products/kitchen/zh894.jpg"],
+    "ZH885": ["images/products/kitchen/zh885.jpg"],
+    "ZH895": ["images/products/kitchen/zh895.jpg"],
+    "BEB-808": ["images/products/kitchen/beb-808.jpg"]
   },
 
   // ===== Бронь =====

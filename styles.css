@@ -179,16 +179,6 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent)}
 
 .pm-img img{max-width:100%;height:auto}.pm-extra{display:block;margin-top:10px;border-radius:12px}
 
-/* ===== фоновое видео на весь сайт ===== */
-.bg-video{position:fixed;inset:0;z-index:-2;background:#1d1a17 url(images/video/bgw-poster.jpg) right center/cover no-repeat;overflow:hidden}
-.bg-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;filter:saturate(1.15) brightness(1.35) contrast(1.05)}
-.bg-video::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,rgba(29,26,23,.05),rgba(15,12,10,.62) 100%),linear-gradient(180deg,rgba(29,26,23,.18),rgba(29,26,23,.28))}
-@media (prefers-reduced-motion:reduce){.bg-video video{display:none}}
-.hero{text-shadow:0 1px 14px #000a}
-.section{background:rgba(255,250,243,.84);-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);border-radius:22px;margin:22px auto;width:calc(100% - 28px);box-shadow:0 10px 40px #0006;border:1px solid #ffffff40}
-.hero.section,.hero{background:linear-gradient(180deg,rgba(29,26,23,.4),rgba(29,26,23,.22));}
-.footer{background:rgba(20,17,14,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-@media (max-width:640px){.section{width:calc(100% - 12px);border-radius:16px;padding:20px 12px}}
 
 .lang-sel{margin-left:auto;background:#3a342e;color:#fff;border:1px solid #5a4d40;border-radius:999px;font:inherit;font-weight:700;font-size:.85rem;padding:0 10px;min-height:44px;max-width:112px;cursor:pointer}
 .lang-sel + .cart-btn{margin-left:8px}
@@ -198,11 +188,75 @@ html.not-ru .lang-note{display:block}
 @media (max-width:380px){.logo{font-size:1.05rem}.logo-mark{font-size:1.2rem}.topbar{gap:8px;padding:8px 10px}.lang-sel{max-width:96px;padding:0 6px}.cart-btn{padding:8px 10px}}
 .topbar{flex-wrap:nowrap}.logo span:last-child{white-space:nowrap}
 
-.bg-video::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(20,16,13,.55),rgba(20,16,13,.15) 55%,transparent)}
-.section{background:linear-gradient(90deg,rgba(255,250,243,.93),rgba(255,250,243,.86) 55%,rgba(255,250,243,.8))}
-@media (max-width:700px){.bg-video::before{background:rgba(15,12,10,.35)}.bg-video::after{background:linear-gradient(180deg,rgba(20,16,13,.45),rgba(20,16,13,.6))}.section{background:rgba(255,250,243,.9)}}
 .cart-btn{white-space:nowrap;display:inline-flex;align-items:center;gap:4px}
 .card .badge.hit{top:auto;bottom:8px;left:8px}
 .card .badge.fuel{top:8px;right:8px}
 .grid>*{min-width:0}
 @media (max-width:430px){.lang-sel{max-width:92px;padding:0 6px;font-size:.8rem}.logo{font-size:1.1rem}.topbar{gap:6px;padding:8px 10px}.cart-btn{padding:8px 10px}}
+
+
+/* ===== СВЕТЛАЯ ТЕМА (кухонный стиль) ===== */
+:root{--bg:#fbf7f1;--ink:#26221e;--muted:#6f675e;--card:#fff;--line:#ece3d6;--accent:#c4651a;--accent-d:#a9540f;--steel:#e9ecef;--steel-d:#c9ced3;--shadow:0 8px 30px rgba(60,40,20,.08);--shadow-s:0 2px 10px rgba(60,40,20,.07);--radius:20px}
+body{background:var(--bg);color:var(--ink);font-family:"Inter","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;letter-spacing:-.005em}
+a{color:var(--accent-d)}
+h1,h2,h3{letter-spacing:-.02em;font-weight:750}
+h2{font-size:1.75rem;margin-bottom:.7em}
+.topbar{background:rgba(251,247,241,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);border-bottom:1px solid var(--line)}
+.logo{color:var(--ink)}
+.nav a{color:var(--muted);font-weight:600}.nav a:hover{color:var(--accent-d)}
+.hdr-phone{color:var(--ink)}
+.lang-sel{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.cart-btn{background:var(--ink);color:#fff}
+.cart-btn b{background:var(--accent)}
+.btn{background:#f1ebe2;color:var(--ink);border-radius:14px}
+.btn.primary{background:var(--accent);color:#fff}.btn.primary:hover{background:var(--accent-d)}
+.btn.call{background:var(--ink)}
+.btn.ghost{background:transparent;border:1.5px solid var(--steel-d);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent-d)}
+.hero{background:none;color:var(--ink);text-shadow:none;display:grid;gap:22px;padding:30px 16px 8px;max-width:1200px;margin:0 auto}
+.hero h1{font-size:2.2rem;line-height:1.1}
+.lead{color:var(--muted)}
+.hero .btn.ghost{color:var(--ink);border-color:var(--steel-d)}
+.hero-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#e9e2d8;aspect-ratio:16/10;position:relative}
+.hero-media video{width:100%;height:100%;object-fit:cover;object-position:78% center;display:block}
+.hero-media::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);pointer-events:none}
+@media (prefers-reduced-motion:reduce){.hero-media video{display:none}.hero-media{background:#e9e2d8 url(images/video/bgw-poster.jpg) 78% center/cover}}
+.hero-points{grid-column:1/-1}
+.hero-points li{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-s);color:var(--muted)}
+.hero-points b{color:var(--ink)}
+.section{background:none;box-shadow:none;border:0;border-radius:0;backdrop-filter:none;-webkit-backdrop-filter:none;width:auto;margin:0 auto;padding:44px 16px;max-width:1200px}
+.picker,.info-cards,.steps{background:none}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-s);transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.card-img{background:#f3efe8}
+.card-img img{aspect-ratio:3/4;object-fit:cover}
+.card-img.ph{background:#f3efe8}
+.card-img.ph img{object-fit:contain}
+.badge.hit{background:var(--accent);color:#fff}
+.badge.fuel{background:rgba(255,255,255,.92);border:0;color:var(--ink);box-shadow:var(--shadow-s)}
+.card .badge.hit{bottom:auto;top:8px;left:8px}
+.model{color:var(--muted)}
+.footer{background:#f1ebe2;color:var(--muted);border-top:1px solid var(--line)}
+.footer a{color:var(--accent-d)}
+.mobile-bar{background:rgba(251,247,241,.94);border-top:1px solid var(--line);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.pm-img img{border-radius:14px}
+@media (min-width:960px){
+  .hero{grid-template-columns:1.05fr 1fr;align-items:center;padding-top:52px;column-gap:40px}
+  .hero h1{font-size:3rem}.hero-text{max-width:none}
+  .section{padding:60px 16px}
+}
+.hero-media{aspect-ratio:5/4}
+.hero-media video{object-position:97% center}
+@media (min-width:960px){#hitsGrid{grid-template-columns:repeat(4,1fr)}.hero-media{aspect-ratio:1/1;max-height:520px}}
+.mobile-bar .btn{border-radius:12px}
+.hero-media{aspect-ratio:4/4.4;max-width:460px;width:100%;justify-self:center}
+.hero-media video{position:absolute;top:0;right:-9%;height:100%;width:auto;aspect-ratio:16/9;max-width:none;object-fit:cover}
+.hero-media{background:#e9e2d8}
+@media (min-width:960px){.hero-media{aspect-ratio:4/5;max-height:none;justify-self:end}}
+@media (prefers-reduced-motion:reduce){.hero-media{background:#e9e2d8 url(images/video/bgw-poster.jpg) right/auto 100% no-repeat}}
+.modal{background:rgba(38,34,30,.45);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.pm-img img{max-height:none;width:100%}
+.pm-img{position:relative}
+@media (min-width:960px){.pm{grid-template-columns:340px 1fr}}
+.hero-media video{right:-17%}
+.hero-media video{height:140%;top:-8%;right:-6%}

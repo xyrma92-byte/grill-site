@@ -64,7 +64,7 @@ function bindContacts(root = document){
 function cardHTML(p){
   return `<article class="card" data-id="${p.id}">
     <button class="card-img${isPhoto(p) ? '' : ' ph'}" type="button" data-open="${p.id}" aria-label="Подробнее: ${esc(p.name)}">
-      <img src="${esc(imgSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" loading="lazy" width="320" height="360">
+      <img src="${esc(imgSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" loading="lazy" width="600" height="800">
       ${p.hit ? '<span class="badge hit">Хит</span>' : ''}
       <span class="badge fuel ${p.fuel}">${p.fuel === 'gas' ? '🔥 Газ' : '⚡ Электро'}</span>
     </button>
