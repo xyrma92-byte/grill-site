@@ -177,8 +177,8 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent)}
 .pm-img img{max-width:100%;height:auto}.pm-extra{display:block;margin-top:10px;border-radius:12px}
 
 /* ===== фоновое видео на весь сайт ===== */
-.bg-video{position:fixed;inset:0;z-index:-2;background:#1d1a17 url(images/video/bg-poster.jpg) center/cover no-repeat;overflow:hidden}
-.bg-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.15) brightness(1.35) contrast(1.05)}
+.bg-video{position:fixed;inset:0;z-index:-2;background:#1d1a17 url(images/video/bgw-poster.jpg) right center/cover no-repeat;overflow:hidden}
+.bg-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;filter:saturate(1.15) brightness(1.35) contrast(1.05)}
 .bg-video::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,rgba(29,26,23,.05),rgba(15,12,10,.62) 100%),linear-gradient(180deg,rgba(29,26,23,.18),rgba(29,26,23,.28))}
 @media (prefers-reduced-motion:reduce){.bg-video video{display:none}}
 .hero{text-shadow:0 1px 14px #000a}
@@ -194,3 +194,8 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent)}
 html.not-ru .lang-note{display:block}
 @media (max-width:380px){.logo{font-size:1.05rem}.logo-mark{font-size:1.2rem}.topbar{gap:8px;padding:8px 10px}.lang-sel{max-width:96px;padding:0 6px}.cart-btn{padding:8px 10px}}
 .topbar{flex-wrap:nowrap}.logo span:last-child{white-space:nowrap}
+
+.bg-video::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(20,16,13,.55),rgba(20,16,13,.15) 55%,transparent)}
+.section{background:linear-gradient(90deg,rgba(255,250,243,.93),rgba(255,250,243,.86) 55%,rgba(255,250,243,.8))}
+@media (max-width:700px){.bg-video::before{background:rgba(15,12,10,.35)}.bg-video::after{background:linear-gradient(180deg,rgba(20,16,13,.45),rgba(20,16,13,.6))}.section{background:rgba(255,250,243,.9)}}
+.cart-btn{white-space:nowrap;display:inline-flex;align-items:center;gap:4px}
