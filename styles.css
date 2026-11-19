@@ -277,3 +277,4 @@ h2{font-size:1.75rem;margin-bottom:.7em}
   .hero h1{font-size:2.7rem}
   .hero .cta-row .btn.big{flex:0 1 auto;padding:10px 16px;min-height:50px}
 }
+@media (min-width:960px){#hitsGrid{grid-template-columns:repeat(4,1fr)}}
