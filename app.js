@@ -46,7 +46,8 @@ function sectionsText(p){
 }
 
 // ---------- контакты ----------
-const waLink = text => CFG.whatsapp + (text ? (CFG.whatsapp.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent(text) : '');
+function waLink(text){ return waLink0(window.I18N ? I18N.tr(text) : text); }
+const waLink0 = text => CFG.whatsapp + (text ? (CFG.whatsapp.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent(text) : '');
 function bindContacts(root = document){
   $$('[data-brand]', root).forEach(e => e.textContent = CFG.companyName);
   $$('[data-phone]', root).forEach(e => e.textContent = CFG.phone);
@@ -480,4 +481,5 @@ function init(){
   document.title = `Грили для шаурмы и донера — газ и электро | ${CFG.companyName}`;
   bindContacts(); renderHits(); bindFilters(); renderCatalog(); bindPicker(); renderFaq(); bindOrderForm(); bindGlobal(); refreshCart();
 }
+window.addEventListener('i18n:change', () => { bindContacts(); renderHits(); renderCatalog(); refreshCart(); });
 init();

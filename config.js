@@ -24,26 +24,87 @@ window.SITE_CONFIG = {
   madeToOrderLead: "",                  // Срок поставки «под заказ», напр. "от 3 недель". Пусто → «срок сообщим при заказе»
   // Фото товаров: { "ZH91": "images/products/zh91.jpg" }. Пока пусто → схематичные рисунки из images/placeholders/
   productPhotos: {
-    "BGB-25A": "images/products/bgb-25a-card.jpg", "BGB-800": "images/products/bgb-800-card.jpg",
-    "BGB-950": "images/products/bgb-950-live-card.jpg", "BGB-1050": "images/products/bgb-1050-card.jpg",
-    "BGB-1150": "images/products/bgb-1150-card.jpg", "BEB-808": "images/products/beb-808-card.jpg",
-    "ZH890": "images/products/zh890-card.jpg",
-    "ZH891": "images/products/zh891-card.jpg",
-    "ZH884": "images/products/zh884-card.jpg",
-    "ZH894": "images/products/zh894-card.jpg",
-    "ZH885": "images/products/zh885-card.jpg",
-    "ZH895": "images/products/zh895-card.jpg",
-    "ZH90": "images/products/zh90-card.jpg",
-    "ZH91": "images/products/zh91-card.jpg",
-    "ZH91A": "images/products/zh91a-card.jpg",
-    "ZH92": "images/products/zh92-card.jpg",
-    "ZH92M": "images/products/zh92m-card.jpg",
-    "ZH95": "images/products/zh95-card.jpg",
-    "ZH96": "images/products/zh96-card.jpg"
+    "ZH91": "images/products/zh91-tile.jpg",
+    "BGB-800": "images/products/bgb-800-tile.jpg",
+    "BGB-25A": "images/products/bgb-25a-tile.jpg",
+    "BGB-950": "images/products/bgb-950-live-tile.jpg",
+    "ZH92M": "images/products/zh92m-tile.jpg",
+    "ZH90": "images/products/zh90-tile.jpg",
+    "BGB-1050": "images/products/bgb-1050-tile.jpg",
+    "ZH92": "images/products/zh92-tile.jpg",
+    "ZH91A": "images/products/zh91a-tile.jpg",
+    "BGB-1150": "images/products/bgb-1150-tile.jpg",
+    "ZH95": "images/products/zh95-tile.jpg",
+    "ZH96": "images/products/zh96-tile.jpg",
+    "ZH890": "images/products/zh890-tile.jpg",
+    "ZH891": "images/products/zh891-tile.jpg",
+    "ZH884": "images/products/zh884-tile.jpg",
+    "ZH894": "images/products/zh894-tile.jpg",
+    "ZH885": "images/products/zh885-tile.jpg",
+    "ZH895": "images/products/zh895-tile.jpg",
+    "BEB-808": "images/products/beb-808-tile.jpg"
   },
-  // Доп. фото в карточке товара (галерея): первая — основная выше
+  // Галерея в карточке товара: постер-карточки
   productGallery: {
-    "BGB-950": ["images/products/bgb-950-card.jpg", "images/products/bgb-950-in-action.jpg"]
+    "ZH91": [
+        "images/products/zh91-card.jpg"
+    ],
+    "BGB-800": [
+        "images/products/bgb-800-card.jpg"
+    ],
+    "BGB-25A": [
+        "images/products/bgb-25a-card.jpg"
+    ],
+    "BGB-950": [
+        "images/products/bgb-950-live-card.jpg",
+        "images/products/bgb-950-card.jpg",
+        "images/products/bgb-950-in-action.jpg"
+    ],
+    "ZH92M": [
+        "images/products/zh92m-card.jpg"
+    ],
+    "ZH90": [
+        "images/products/zh90-card.jpg"
+    ],
+    "BGB-1050": [
+        "images/products/bgb-1050-card.jpg"
+    ],
+    "ZH92": [
+        "images/products/zh92-card.jpg"
+    ],
+    "ZH91A": [
+        "images/products/zh91a-card.jpg"
+    ],
+    "BGB-1150": [
+        "images/products/bgb-1150-card.jpg"
+    ],
+    "ZH95": [
+        "images/products/zh95-card.jpg"
+    ],
+    "ZH96": [
+        "images/products/zh96-card.jpg"
+    ],
+    "ZH890": [
+        "images/products/zh890-card.jpg"
+    ],
+    "ZH891": [
+        "images/products/zh891-card.jpg"
+    ],
+    "ZH884": [
+        "images/products/zh884-card.jpg"
+    ],
+    "ZH894": [
+        "images/products/zh894-card.jpg"
+    ],
+    "ZH885": [
+        "images/products/zh885-card.jpg"
+    ],
+    "ZH895": [
+        "images/products/zh895-card.jpg"
+    ],
+    "BEB-808": [
+        "images/products/beb-808-card.jpg"
+    ]
   },
 
   // ===== Бронь =====
