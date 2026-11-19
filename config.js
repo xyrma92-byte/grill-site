@@ -23,7 +23,15 @@ window.SITE_CONFIG = {
   stock: {},
   madeToOrderLead: "",                  // Срок поставки «под заказ», напр. "от 3 недель". Пусто → «срок сообщим при заказе»
   // Фото товаров: { "ZH91": "images/products/zh91.jpg" }. Пока пусто → схематичные рисунки из images/placeholders/
-  productPhotos: { "BGB-950": "images/products/bgb-950-in-action.jpg" }, // кадр из видео поставщика: гриль в работе
+  productPhotos: {
+    "BGB-25A": "images/products/bgb-25a-card.jpg", "BGB-800": "images/products/bgb-800-card.jpg",
+    "BGB-950": "images/products/bgb-950-live-card.jpg", "BGB-1050": "images/products/bgb-1050-card.jpg",
+    "BGB-1150": "images/products/bgb-1150-card.jpg", "BEB-808": "images/products/beb-808-card.jpg"
+  },
+  // Доп. фото в карточке товара (галерея): первая — основная выше
+  productGallery: {
+    "BGB-950": ["images/products/bgb-950-card.jpg", "images/products/bgb-950-in-action.jpg"]
+  },
 
   // ===== Бронь =====
   reservationDays: 1,                   // бронь товара из наличия до конца следующего календарного дня

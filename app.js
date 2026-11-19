@@ -118,7 +118,8 @@ function openProduct(id){
     `<tr><th>Гарантия</th><td>${p.warranty ? esc(p.warranty) : 'уточняйте у нас'}</td></tr>`;
   $('#productBody').innerHTML = `<div class="pm">
     <div class="pm-img"><img src="${esc(imgSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" width="320" height="360">
-      ${isPhoto(p) ? '' : '<p class="muted small">Схематичный рисунок, не фото модели.</p>'}</div>
+      ${isPhoto(p) ? '' : '<p class="muted small">Схематичный рисунок, не фото модели.</p>'}
+      ${((CFG.productGallery||{})[p.model]||[]).map(u=>`<img class="pm-extra" src="${esc(u)}" alt="${esc(p.name)}" loading="lazy">`).join('')}</div>
     <div class="pm-info">
       ${p.hit ? '<span class="badge hit static">Хит</span>' : ''}
       <h2 id="pmTitle">${esc(p.name)}</h2>
