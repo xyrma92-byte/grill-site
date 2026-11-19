@@ -1,7 +1,7 @@
 'use strict';
 // ===== ГрильПро — каталог грилей, корзина-заявка, счёт, бронь =====
 const CFG = window.SITE_CONFIG;
-const PRODUCTS = window.PRODUCTS || [];
+const PRODUCTS = (window.PRODUCTS || []).filter(p => !p.hidden);  // hidden:true — модель скрыта (нет подтверждённого фото)
 const BY_ID = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
 const PM_ALL = CFG.paymentMethods || {};
 const PM = Object.fromEntries(Object.entries(PM_ALL).filter(([, m]) => m.enabled));
@@ -484,3 +484,10 @@ function init(){
 }
 window.addEventListener('i18n:change', () => { bindContacts(); renderHits(); renderCatalog(); refreshCart(); });
 init();
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('.cat-banner'); if (!b) return;
+  const chip = document.querySelector(`.chip[data-f="fuel"][data-v="${b.dataset.cat}"]`);
+  if (chip) chip.click();
+  document.querySelector('#catalogGrid').scrollIntoView({behavior:'smooth', block:'start'});
+});
