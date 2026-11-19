@@ -491,3 +491,36 @@ document.addEventListener('click', e => {
   if (chip) chip.click();
   document.querySelector('#catalogGrid').scrollIntoView({behavior:'smooth', block:'start'});
 });
+
+// ---------- Газ или электро? ----------
+(function(){
+  const PAIRS = [['BGB-800','ZH890'],['BGB-950','ZH891'],['BGB-950','ZH884'],['BGB-1050','ZH885'],['ZH92','ZH894']];
+  const KWH_PER_KG = 12.8;
+  const by = m => PRODUCTS.find(p => p.model === m);
+  const sel = document.getElementById('cPair'); if (!sel) return;
+  sel.innerHTML = PAIRS.map((p,i) => `<option value="${i}">🔥 ${p[0]} ⟷ ⚡ ${p[1]}</option>`).join('');
+  sel.value = '1';
+  const $v = id => parseFloat(String(document.getElementById(id).value).replace(',', '.')) || 0;
+  const rub = n => Math.round(n).toLocaleString('ru-RU').replace(/\u00a0/g, ' ');
+  function calc(){
+    const [g, e] = PAIRS[+sel.value].map(by); if (!g || !e) return;
+    const hrs = $v('cHours') * 30, load = $v('cLoad') / 100, tar = $v('cTariff'), lpg = $v('cLpg');
+    const gasM = g.powerKw * load * hrs * lpg / KWH_PER_KG, elM = e.powerKw * load * hrs * tar;
+    document.getElementById('oGasM').textContent = rub(gasM);
+    document.getElementById('oElM').textContent = rub(elM);
+    document.getElementById('oGasModel').innerHTML = `<span translate="no">${g.model}</span> · <span>${String(g.powerKw).replace('.', ',')} кВт</span>`;
+    document.getElementById('oElModel').innerHTML = `<span translate="no">${e.model}</span> · <span>${String(e.powerKw).replace('.', ',')} кВт</span>`;
+    const save = elM - gasM, diff = (e.price || 0) - (g.price || 0);
+    const vg = document.getElementById('vGas'), ve = document.getElementById('vEl');
+    vg.hidden = !(save > 0); ve.hidden = save > 0;
+    if (save > 0){
+      document.getElementById('vSave').textContent = rub(save);
+      const pw = document.getElementById('vPayWrap');
+      pw.hidden = !(diff > 0);
+      if (diff > 0) document.getElementById('vPay').textContent = (diff / save).toFixed(1).replace('.', ',');
+    }
+  }
+  document.getElementById('calcForm').addEventListener('input', calc);
+  calc();
+  window.addEventListener('i18n:change', calc);
+})();

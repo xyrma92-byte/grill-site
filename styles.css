@@ -278,3 +278,18 @@ h2{font-size:1.75rem;margin-bottom:.7em}
   .hero .cta-row .btn.big{flex:0 1 auto;padding:10px 16px;min-height:50px}
 }
 @media (min-width:960px){#hitsGrid{grid-template-columns:repeat(4,1fr)}}
+/* калькулятор «Газ или электро?» */
+.compare .calc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-s);padding:18px;margin:14px 0}
+.calc-in{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc-in label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--muted);font-weight:600;min-width:0}
+.calc-in .c-wide{grid-column:1/-1}
+.calc-in input,.calc-in select{font:inherit;color:var(--ink);background:#fbf7f1;border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:46px;width:100%}
+.calc-out{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 10px}
+.c-card{border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:2px;background:#f6efe6}
+.c-card.el{background:#eef1f4}
+.c-t{font-weight:700}.c-m{font-size:1.7rem;letter-spacing:-.02em}.c-s,.c-h{color:var(--muted);font-size:.85rem}
+.c-verdict p{margin:6px 0}
+.pc{display:grid;grid-template-columns:1fr;gap:12px}
+.pc-col{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px}
+.pc-col h3{margin:0 0 6px}.pc-col ul{margin:0;padding-left:20px}.pc-col li{margin:4px 0}.pc-col li.con{color:var(--muted)}
+@media (min-width:700px){.calc-in{grid-template-columns:2fr 1fr 1fr 1fr 1fr}.calc-in .c-wide{grid-column:auto}.pc{grid-template-columns:1fr 1fr}}

@@ -7,7 +7,7 @@
 <meta name="description" content="Профессиональные вертикальные грили для шаурмы и донера: газовые и электрические. Подбор, счёт, доставка по России.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fbf7f1">
-<link rel="stylesheet" href="styles.css?v=202611190926">
+<link rel="stylesheet" href="styles.css?v=202611190944">
 </head>
 <body>
 <header class="topbar">
@@ -32,7 +32,7 @@
       </div>
       <div class="hero-links"><a class="btn ghost" href="#catalog">Смотреть каталог ↓</a><a class="btn ghost" href="#picker">Подобрать гриль</a></div>
     </div>
-    <picture class="hero-media" aria-hidden="true"><source srcset="images/site/hero.webp?v=202611190926" type="image/webp"><img src="images/site/hero.jpg?v=202611190926" alt="" width="1600" height="900" fetchpriority="high"></picture>
+    <picture class="hero-media" aria-hidden="true"><source srcset="images/site/hero.webp?v=202611190944" type="image/webp"><img src="images/site/hero.jpg?v=202611190944" alt="" width="1600" height="900" fetchpriority="high"></picture>
   </section>
   <div class="hero-pts">
     <ul class="hero-points">
@@ -51,8 +51,8 @@
   <section class="section" id="catalog">
     <h2>Каталог</h2>
     <div class="cat-banners">
-      <button type="button" class="cat-banner" data-cat="gas"><img src="images/site/banner_gas.webp?v=202611190926" alt="" loading="lazy" width="960" height="540"><span><b>🔥 Газ</b> 2–6 горелок</span></button>
-      <button type="button" class="cat-banner" data-cat="electric"><img src="images/site/banner_el.webp?v=202611190926" alt="" loading="lazy" width="960" height="540"><span><b>⚡ Электро</b> 8–10,8 кВт</span></button>
+      <button type="button" class="cat-banner" data-cat="gas"><img src="images/site/banner_gas.webp?v=202611190944" alt="" loading="lazy" width="960" height="540"><span><b>🔥 Газ</b> 2–6 горелок</span></button>
+      <button type="button" class="cat-banner" data-cat="electric"><img src="images/site/banner_el.webp?v=202611190944" alt="" loading="lazy" width="960" height="540"><span><b>⚡ Электро</b> 8–10,8 кВт</span></button>
     </div>
     <div class="filters" id="filters">
       <div class="f-group" role="group" aria-label="Тип"><span class="f-label">Тип</span>
@@ -110,6 +110,48 @@
     <div id="pickerResult" class="picker-result" hidden></div>
   </section>
 
+  <section class="section compare" id="compare">
+    <h2>Газ или электро?</h2>
+    <p class="muted">Сравните расходы на энергию и срок окупаемости разницы в цене. Значения по умолчанию — для Санкт-Петербурга, их можно менять.</p>
+    <div class="calc">
+      <form class="calc-in" id="calcForm" onsubmit="return false">
+        <label class="c-wide"><span>Пара моделей</span><select id="cPair"></select></label>
+        <label><span>Часов работы в день</span><input id="cHours" type="number" min="1" max="24" step="1" value="12" inputmode="decimal"></label>
+        <label><span>Средняя загрузка, %</span><input id="cLoad" type="number" min="10" max="100" step="5" value="55" inputmode="decimal"></label>
+        <label><span>Электричество, ₽/кВт·ч</span><input id="cTariff" type="number" min="1" step="0.1" value="13.35" inputmode="decimal"></label>
+        <label><span>Пропан-бутан, ₽/кг</span><input id="cLpg" type="number" min="10" step="1" value="78" inputmode="decimal"></label>
+      </form>
+      <div class="calc-out">
+        <div class="c-card gas"><span class="c-t">🔥 Газ</span><b class="c-m" id="oGasM"></b><span class="c-s">₽ в месяц</span><span class="c-h" id="oGasModel"></span></div>
+        <div class="c-card el"><span class="c-t">⚡ Электро</span><b class="c-m" id="oElM"></b><span class="c-s">₽ в месяц</span><span class="c-h" id="oElModel"></span></div>
+      </div>
+      <div class="c-verdict" id="cVerdict" aria-live="polite">
+        <p id="vGas" hidden><span>Газ дешевле по энергии на</span> <b id="vSave"></b> <span>₽ в месяц.</span> <span id="vPayWrap"><span>Разница в цене окупится примерно за</span> <b id="vPay"></b> <span>мес.</span></span></p>
+        <p id="vEl" hidden><span>При этих данных электро не дороже по энергии — разница в цене газа и электро не окупается.</span></p>
+        <p class="muted small"><span>Цены грилей предварительные. Мощность газовых моделей — тепловая (расход газа), электро — потребляемая; сравнение по паспортным кВт, реальную производительность мы не измеряли.</span></p>
+      </div>
+    </div>
+    <div class="pc">
+      <div class="pc-col"><h3>🔥 Газ</h3><ul>
+        <li>Дешевле в эксплуатации при текущих ценах на газ и электричество</li>
+        <li>Не нужна электрическая мощность 380 В</li>
+        <li>Можно работать там, где нет мощной электросети</li>
+        <li class="con">Нужны баллоны: хранение, заправка или обмен</li>
+        <li class="con">Нужна вентиляция; в ТЦ, подвалах и цоколях газ часто нельзя</li></ul></div>
+      <div class="pc-col"><h3>⚡ Электро</h3><ul>
+        <li>Нет баллонов и открытого пламени</li>
+        <li>Подходит там, где газ запрещён: фудкорты и ТЦ</li>
+        <li>Проще в обслуживании, чище</li>
+        <li class="con">Дороже в покупке и по энергии</li>
+        <li class="con">Нужна мощность 380 В; подключение дополнительной мощности для бизнеса может быть дорогим</li></ul></div>
+    </div>
+    <p class="muted small"><span>Требования к объекту и газу уточняйте у газовой службы и проектировщика.</span> <span>Источники:</span>
+      <a href="https://ess-energy.ru/tarify/sankt-peterburg" target="_blank" rel="noopener">тариф СПб</a> ·
+      <a href="https://mitex.ru/news/cena-gaz-agzs-240826.php" target="_blank" rel="noopener">цена газа</a> ·
+      <a href="https://www.consultant.ru/document/cons_doc_LAW_93648/f6918af5a222ad5f080221933dc3c6ee45e4159f/" target="_blank" rel="noopener">теплота сгорания</a> ·
+      <a href="https://pesc.ru/b2c/services/emr/" target="_blank" rel="noopener">техприсоединение</a></p>
+  </section>
+
   <section class="section steps">
     <h2>Как купить</h2>
     <ol class="steps-list">
@@ -122,7 +164,7 @@
 
   <section class="section info-cards">
     <div class="info" id="delivery">
-      <img class="info-img" src="images/site/delivery.webp?v=202611190926" alt="" loading="lazy" width="960" height="540">
+      <img class="info-img" src="images/site/delivery.webp?v=202611190944" alt="" loading="lazy" width="960" height="540">
       <h2>🚚 Доставка по России</h2>
       <p>Отправляем транспортными компаниями в любой город — до терминала или до двери. Можно забрать самому со склада.</p>
       <p><b>Стоимость рассчитаем</b> под ваш город и сообщим до отправки. Доставка в счёт не входит.</p>
@@ -231,10 +273,10 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="config.js?v=202611190926"></script>
-<script src="products.js?v=202611190926"></script>
-<script src="reservations.js?v=202611190926"></script>
-<script src="i18n.js?v=202611190926"></script>
-<script src="app.js?v=202611190926"></script>
+<script src="config.js?v=202611190944"></script>
+<script src="products.js?v=202611190944"></script>
+<script src="reservations.js?v=202611190944"></script>
+<script src="i18n.js?v=202611190944"></script>
+<script src="app.js?v=202611190944"></script>
 </body>
 </html>
