@@ -293,3 +293,5 @@ h2{font-size:1.75rem;margin-bottom:.7em}
 .pc-col{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px}
 .pc-col h3{margin:0 0 6px}.pc-col ul{margin:0;padding-left:20px}.pc-col li{margin:4px 0}.pc-col li.con{color:var(--muted)}
 @media (min-width:700px){.calc-in{grid-template-columns:2fr 1fr 1fr 1fr 1fr}.calc-in .c-wide{grid-column:auto}.pc{grid-template-columns:1fr 1fr}}
+
+.specs .spec-pend td{color:var(--muted);font-style:italic}.specs .spec-pend th{color:var(--muted)}

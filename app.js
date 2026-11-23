@@ -17,11 +17,11 @@ const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } cat
 const round2 = n => Math.round(n * 100) / 100;
 
 // ---------- цены, наличие, фото ----------
+// Цена берётся ТОЛЬКО из catalog-data.js (CATALOG_DATA.prices); пусто/null = «Цена по запросу». Черновые p.price из products.js не используются.
 function priceOf(p){
   if (CFG.priceMode === 'request') return null;
-  const o = CFG.priceOverrides || {};
-  if (Object.prototype.hasOwnProperty.call(o, p.model)) return o[p.model] == null ? null : Number(o[p.model]);
-  return p.price ?? null;
+  const v = ((window.CATALOG_DATA || {}).prices || {})[p.model];
+  return v == null || v === '' || isNaN(Number(v)) ? null : Number(v);
 }
 const priceText = p => priceOf(p) == null ? 'Цена по запросу' : money(priceOf(p));
 const leadText = () => CFG.madeToOrderLead ? `срок поставки ${CFG.madeToOrderLead}` : 'срок сообщим при заказе';
@@ -113,11 +113,35 @@ function bindFilters(){
   $('#sortSel').addEventListener('change', renderCatalog);
 }
 
+// ---------- таблица характеристик: стандартные строки + то, что есть у поставщика; недостающее = «уточняется» ----------
+const SPEC_STD = [
+  ['load', 'Загрузка мяса, кг', /загрузк/i, 'loadKg', v => String(v).replace('.', ',')],
+  ['gas', 'Тип газа', /тип газа|топливо/i, 'gasType', v => String(v), 'gas'],
+  ['power', 'Мощность', /мощност/i, 'powerKw', v => String(v).replace('.', ',') + ' кВт'],
+  ['volt', 'Напряжение, частота', /электропитан|напряжен/i, 'voltage', v => String(v)],
+  ['dims', 'Габариты (Ш×Г×В)', /габарит/i, 'dimensions', v => String(v) + ' мм'],
+  ['wt', 'Вес', /^вес/i, 'weight', v => String(v)],
+];
+function specRows(p){
+  const cd = (((window.CATALOG_DATA || {}).specs || {})[p.model]) || {}, used = new Set(), out = [];
+  const src = p.specs || [];
+  for (const [id, label, re, key, fmt, only] of SPEC_STD){
+    if (only && only !== p.fuel) continue;
+    const i = src.findIndex(([k]) => re.test(k)); if (i >= 0) used.add(i);
+    const cv = cd[key];
+    if (cv != null && cv !== '') out.push([label, fmt(cv)]);
+    else if (i >= 0) out.push([src[i][0], src[i][1]]);
+    else out.push([label, 'уточняется', true]);
+  }
+  src.forEach(([k, v], i) => { if (!used.has(i)) out.push([k, v]); });
+  return out;
+}
+
 // ---------- карточка товара ----------
 function openProduct(id){
   const p = BY_ID[id]; if (!p) return;
-  const specs = p.specs.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('') +
-    `<tr><th>Гарантия</th><td>${p.warranty ? esc(p.warranty) : 'уточняйте у нас'}</td></tr>`;
+  const specs = specRows(p).map(([k, v, pend]) => `<tr${pend ? ' class="spec-pend"' : ''}><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('') +
+    `<tr${(((window.CATALOG_DATA||{}).specs||{})[p.model]||{}).warranty || p.warranty ? '' : ' class="spec-pend"'}><th>Гарантия</th><td>${esc(((((window.CATALOG_DATA||{}).specs||{})[p.model]||{}).warranty) || p.warranty || 'уточняется')}</td></tr>`;
   $('#productBody').innerHTML = `<div class="pm">
     <div class="pm-img"><img src="${esc(bigSrc(p))}" alt="${esc(isPhoto(p) ? p.name : 'Схематичный рисунок гриля, не фото')}" width="320" height="360">
       ${isPhoto(p) ? '' : '<p class="muted small">Схематичный рисунок, не фото модели.</p>'}
@@ -510,7 +534,7 @@ document.addEventListener('click', e => {
     document.getElementById('oElM').textContent = rub(elM);
     document.getElementById('oGasModel').innerHTML = `<span translate="no">${g.model}</span> · <span>${String(g.powerKw).replace('.', ',')} кВт</span>`;
     document.getElementById('oElModel').innerHTML = `<span translate="no">${e.model}</span> · <span>${String(e.powerKw).replace('.', ',')} кВт</span>`;
-    const save = elM - gasM, diff = (e.price || 0) - (g.price || 0);
+    const save = elM - gasM, diff = (priceOf(e) != null && priceOf(g) != null) ? priceOf(e) - priceOf(g) : 0;
     const vg = document.getElementById('vGas'), ve = document.getElementById('vEl');
     vg.hidden = !(save > 0); ve.hidden = save > 0;
     if (save > 0){

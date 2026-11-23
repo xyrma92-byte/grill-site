@@ -86,6 +86,7 @@ const D = [
 ['Сначала хиты','Best sellers first','Avval ommabop','Аввал машҳурҳо','Алгач хиттер'],
 ['Цена ↑','Price ↑','Narx ↑','Нарх ↑','Баа ↑'],['Цена ↓','Price ↓','Narx ↓','Нарх ↓','Баа ↓'],['Мощность ↓','Power ↓','Quvvat ↓','Қувват ↓','Кубаттуулук ↓'],
 ['Под такие условия моделей нет. Сбросьте фильтр или напишите нам — подберём.','No models match. Reset the filter or message us — we will pick one for you.','Bunday shartlarga mos model yoʻq. Filtrni tozalang yoki bizga yozing — tanlab beramiz.','Бо чунин шартҳо модел нест. Филтрро тоза кунед ё ба мо нависед — интихоб мекунем.','Мындай шарттарга model жок. Чыпканы тазалаңыз же бизге жазыңыз — тандап беребиз.'],
+['уточняется','to be confirmed','aniqlanmoqda','равшан карда мешавад','тактоодо'],['Загрузка мяса, кг','Meat load, kg','Goʻsht yuklamasi, kg','Бори гӯшт, кг','Эт жүктөмү, кг'],['Тип газа','Gas type','Gaz turi','Намуди газ','Газ түрү'],['Напряжение, частота','Voltage, frequency','Kuchlanish, chastota','Шиддат, басомад','Чыңалуу, жыштык'],
 ['Цена по запросу','Price on request','Narx soʻrov boʻyicha','Нарх аз рӯи дархост','Баасы суроо боюнча'],
 ['цена по запросу','price on request','narx soʻrov boʻyicha','нарх аз рӯи дархост','баасы суроо боюнча'],
 ['по запросу','on request','soʻrov boʻyicha','аз рӯи дархост','суроо боюнча'],
